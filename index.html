@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Homeschool Gradebook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+<h1>Homeschool Gradebook</h1>
+
+<!-- AUTH -->
+<div id="auth">
+  <input id="email" type="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button id="signupBtn">Sign Up</button>
+  <button id="loginBtn">Login</button>
+</div>
+
+<p id="loginStatus"></p>
+<button id="logoutBtn" style="display:none;">Logout</button>
+
+<hr>
+
+<!-- APP -->
+<div id="app">
+  <button onclick="addStudent()">Add Student</button>
+  <button onclick="showCalendar()">Calendar</button>
+  <div id="upcoming"></div>
+<hr />
+<div id="students"></div>
+</div>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyDpAqZ2-zUKLLpwX73nPlqWC7IG6B9yLFM",
+  authDomain: "homeschool-gradebook-31504.firebaseapp.com",
+  projectId: "homeschool-gradebook-31504",
+  storageBucket: "homeschool-gradebook-31504.firebasestorage.app",
+  messagingSenderId: "538154382106",
+  appId: "1:538154382106:web:a30c8347e37810b756b2a3"
+};
+
+  firebase.initializeApp(firebaseConfig);
+  window.auth = firebase.auth();
+  window.db = firebase.firestore();
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>

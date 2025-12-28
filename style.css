@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f6f7fb;
+  margin: 0;
+  padding: 0.75rem;
+  color: #222;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 0.75rem 0 0.25rem;
+}
+
+input, button {
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  margin-top: 0.5rem;
+  background: #4f46e5;
+  color: white;
+  border: none;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+
+#auth, #app {
+  max-width: 900px;
+  margin: auto;
+}
+
+.student-card {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.subject-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.subject-row:last-child {
+  border-bottom: none;
+}
+
+.badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: #e0e7ff;
+}
+
+.add-row {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  button {
+    width: auto;
+  }
+}
+
+.assignment-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 0.8fr 0.8fr auto;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.inline-input {
+  padding: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.inline-input.small {
+  font-size: 0.8rem;
+}
+
+.inline-input.tiny {
+  width: 4rem;
+  text-align: center;
+}
